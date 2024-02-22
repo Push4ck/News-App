@@ -1,162 +1,184 @@
+/* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Ubuntu", sans-serif;
-  outline: none;
-  border: none;
+  font-family: "Ubuntu", sans-serif; /* Set default font family */
+  outline: none; /* Remove default focus outline */
+  border: none; /* Remove default borders */
 }
 
+/* Define CSS variables for color palette */
 :root {
-  --body-color: #1b1a55;
-  --container-color: transparent;
-  --span-color: #9290c3;
-  --text-color: #eeeeee;
-  --h1-color: #535c91;
-  --h2-color: #9b99df;
-  --button-background-color: #e96e45;
-  --button-color: #070f2b;
-  --button-background-hover-color: #fc6736;
-  --border-color: #f0f0f0;
-  --label-color: #ffd369;
+  --body-color: #1b1a55; /* Body background color */
+  --container-color: transparent; /* Container background color */
+  --span-color: #9290c3; /* Span text color */
+  --text-color: #eeeeee; /* Main text color */
+  --h1-color: #535c91; /* Heading 1 color */
+  --h2-color: #9b99df; /* Heading 2 color */
+  --button-background-color: #e96e45; /* Button background color */
+  --button-color: #070f2b; /* Button text color */
+  --button-background-hover-color: #fc6736; /* Button background color on hover */
+  --border-color: #f0f0f0; /* Border color */
+  --label-color: #ffd369; /* Label text color */
 }
 
+/* Base styles for the body */
 body {
-  background-color: var(--body-color);
+  background-color: var(--body-color); /* Set background color */
 }
 
+/* Container styles */
 .container {
-  max-width: 1400px;
-  margin: 50px auto;
-  padding: 30px;
-  border-radius: 10px;
-  background-color: var(--container-color);
-  transition: all 0.3s ease;
+  max-width: 1400px; /* Set maximum container width */
+  margin: 50px auto; /* Center container horizontally */
+  padding: 30px; /* Add padding inside the container */
+  border-radius: 10px; /* Rounded corners for container */
+  background-color: var(--container-color); /* Set background color */
+  transition: all 0.3s ease; /* Add transition effect */
 }
 
+/* Hover effect for container */
 .container:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
 }
 
+/* Heading 1 styles */
 h1 {
-  text-align: center;
-  font-size: 10vh;
-  margin-bottom: 30px;
-  color: var(--h1-color);
-  border-bottom: 2px solid var(--border-color);
-  padding-bottom: 30px;
+  text-align: center; /* Center align heading */
+  font-size: 10vh; /* Set font size */
+  margin-bottom: 30px; /* Add bottom margin */
+  color: var(--h1-color); /* Set text color */
+  border-bottom: 2px solid var(--border-color); /* Add bottom border */
+  padding-bottom: 30px; /* Add padding at the bottom */
 }
 
+/* Span styles */
 h1 span {
-  color: var(--span-color);
+  color: var(--span-color); /* Set text color */
 }
 
+/* Container for selection and search */
 .selectionContainer,
 .searchContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Distribute space evenly */
+  margin-bottom: 20px; /* Add bottom margin */
 }
 
+/* Label styles */
 label {
-  font-size: 16px;
-  margin-right: 10px;
-  color: var(--label-color);
+  font-size: 16px; /* Set font size */
+  margin-right: 10px; /* Add right margin */
+  color: var(--label-color); /* Set text color */
 }
 
+/* Input and select styles */
 select,
 input[type="text"] {
-  padding: 8px;
-  flex: 1;
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
+  padding: 8px; /* Add padding */
+  flex: 1; /* Take remaining space */
+  border: 1px solid var(--border-color); /* Add border */
+  border-radius: 5px; /* Add border radius */
 }
 
+/* Button styles */
 button {
-  background-color: var(--button-background-color);
-  color: var(--button-color);
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  margin-left: 15px;
-  transition: all 0.3 ease;
+  background-color: var(--button-background-color); /* Set background color */
+  color: var(--button-color); /* Set text color */
+  padding: 10px 20px; /* Add padding */
+  border-radius: 6px; /* Add border radius */
+  font-weight: 600; /* Set font weight */
+  cursor: pointer; /* Use pointer cursor */
+  margin-left: 15px; /* Add left margin */
+  transition: all 0.3s ease; /* Add transition effect */
 }
 
+/* News item styles */
 .newsItem {
-  display: flex;
-  align-items: center;
-  margin-top: 40px;
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 20px;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  margin-top: 40px; /* Add top margin */
+  border-bottom: 1px solid var(--border-color); /* Add bottom border */
+  padding-bottom: 20px; /* Add bottom padding */
 }
 
+/* Remove bottom border for last news item */
 .newsItem:last-child {
   border-bottom: none;
 }
 
+/* News image styles */
 .newsImage {
-  flex: 1;
-  max-width: 300px;
+  flex: 1; /* Take 1/3 of container width */
+  max-width: 300px; /* Limit image width */
 }
 
 .newsImage img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
+  width: 100%; /* Set image width to 100% */
+  height: 180px; /* Set image height */
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 10px; /* Add border radius */
 }
 
+/* News content styles */
 .newsContent {
-  flex: 2;
-  margin-left: 20px;
+  flex: 2; /* Take 2/3 of container width */
+  margin-left: 20px; /* Add left margin */
 }
 
+/* Information styles */
 .newsContent .info {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--text-color);
-  margin-bottom: 12px;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  gap: 8px; /* Add gap between items */
+  color: var(--text-color); /* Set text color */
+  margin-bottom: 12px; /* Add bottom margin */
 }
 
 .newsContent .info h5 {
-  margin: 0;
-  font-weight: 400;
+  margin: 0; /* Remove margin */
+  font-weight: 400; /* Set font weight */
 }
 
+/* Heading 2 styles */
 .newsContent h2 {
-  font-size: 18px;
-  color: var(--h2-color);
-  margin-top: 0;
-  max-height: 44px;
-  overflow: hidden;
+  font-size: 18px; /* Set font size */
+  color: var(--h2-color); /* Set text color */
+  margin-top: 0; /* Remove top margin */
+  max-height: 44px; /* Limit height */
+  overflow: hidden; /* Hide overflow */
 }
 
+/* Paragraph styles */
 .newsContent p {
-  color: var(--text-color);
-  margin: 10px 0 20px;
-  font-size: 14px;
-  max-height: 33px;
-  overflow: hidden;
+  color: var(--text-color); /* Set text color */
+  margin: 10px 0 20px; /* Add margins */
+  font-size: 14px; /* Set font size */
+  max-height: 33px; /* Limit height */
+  overflow: hidden; /* Hide overflow */
 }
 
+/* Link styles */
 .newsContent a {
-  background-color: var(--button-background-color);
-  color: var(--button-color);
-  padding: 8px 14px;
-  font-size: 13px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  background-color: var(--button-background-color); /* Set background color */
+  color: var(--button-color); /* Set text color */
+  padding: 8px 14px; /* Add padding */
+  font-size: 13px; /* Set font size */
+  border-radius: 6px; /* Add border radius */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Set font weight */
+  transition: all 0.3s ease; /* Add transition effect */
 }
 
+/* Hover effect for button and links */
 button:hover,
 .newsContent a:hover {
-  background-color: var(--button-background-hover-color);
+  background-color: var(
+    --button-background-hover-color
+  ); /* Change background color on hover */
 }
