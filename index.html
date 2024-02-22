@@ -11,11 +11,16 @@
 
 <body>
 
+    <!-- Container for the entire app -->
     <div class="container">
+        <!-- Heading for the app -->
         <h1><span>News</span> App</h1>
 
+        <!-- Container for category selection -->
         <div class="selectionContainer">
+            <!-- Label for category selection -->
             <label for="category">Choose category :</label>
+            <!-- Dropdown for selecting category -->
             <select id="category">
                 <option value="business">Business</option>
                 <option value="entertainment">Entertainment</option>
@@ -25,18 +30,24 @@
                 <option value="sports">Sports</option>
                 <option value="technology">Technology</option>
             </select>
+            <!-- Button to fetch news based on selected category -->
             <button id="fetchCategory">Fetch News</button>
         </div>
 
+        <!-- Container for search functionality -->
         <div class="searchContainer">
+            <!-- Input field for searching news -->
             <input type="text" id="searchKeyword" placeholder="Search for news...">
+            <!-- Button to initiate search -->
             <button onclick="fetchNews(true)">Search Key</button>
         </div>
 
+        <!-- Container for displaying news articles -->
         <div id="newsContainer"></div>
 
     </div>
 
+    <!-- JavaScript file for handling app logic -->
     <script src="assets/js/main.js"></script>
 </body>
 
